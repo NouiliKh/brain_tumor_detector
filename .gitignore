@@ -21,4 +21,6 @@
 go.work
 
 .idea
-/data
+/dvc_data
+
+data/

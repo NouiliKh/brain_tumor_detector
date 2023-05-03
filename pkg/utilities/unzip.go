@@ -1,4 +1,4 @@
-package main
+package utilities
 
 import (
 	"archive/zip"
@@ -9,9 +9,8 @@ import (
 	"strings"
 )
 
-func main() {
-	dst := "./data"
-	archive, err := zip.OpenReader("./dvc_data/mri_brain_tumor.zip")
+func unzipFolder(src string, dst string) {
+	archive, err := zip.OpenReader(src)
 	if err != nil {
 		panic(err)
 	}
